@@ -9,22 +9,6 @@ npm install capacitor-autostartmanager
 npx cap sync
 ```
 
-## Example
-
-### Check Automatic Date TimeZone
-
-```typescript
-import { AutoStartManager } from 'capacitor-autostartmanager';
-
-
-checkAutomaticDateTimeZone = async () => {
-    const result = await AutoStartManager.checkAutomaticDateTimeZone();
-
-    console.log('Automatic Date Time Zone:', result.isAutomatic);
-  };
-```
-
-
 ## API
 
 <docgen-index>
@@ -57,4 +41,19 @@ checkAutomaticDateTimeZone() => Promise<{ isAutomatic: Boolean; }>
 | ----------- | ---------------- | ---------------------------------------------------- |
 | **valueOf** | () =&gt; boolean | Returns the primitive value of the specified object. |
 
+## Example
+
+### Check Automatic Date TimeZone
+
+```typescript
+import { AutoStartManager } from 'capacitor-autostartmanager';
+
+
+checkAutomaticDateTimeZone = async () => {
+    const result = await AutoStartManager.checkAutomaticDateTimeZone();
+
+    console.log('Automatic Date Time Zone:', result.isAutomatic);
+  };
+```
+![enableautomaticdatetime](https://github.com/asephermann/pictures/blob/main/enableautomaticdatetime.jpg)
 </docgen-api>
