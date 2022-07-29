@@ -14,6 +14,7 @@ npx cap sync
 <docgen-index>
 
 * [`checkAutomaticDateTimeZone()`](#checkautomaticdatetimezone)
+* [`checkCamera()`](#checkcamera)
 * [Interfaces](#interfaces)
 
 </docgen-index>
@@ -28,6 +29,17 @@ checkAutomaticDateTimeZone() => Promise<{ isAutomatic: Boolean; }>
 ```
 
 **Returns:** <code>Promise&lt;{ isAutomatic: <a href="#boolean">Boolean</a>; }&gt;</code>
+
+--------------------
+
+
+### checkCamera()
+
+```typescript
+checkCamera() => Promise<{ isCameraOpen: Boolean; }>
+```
+
+**Returns:** <code>Promise&lt;{ isCameraOpen: <a href="#boolean">Boolean</a>; }&gt;</code>
 
 --------------------
 
@@ -53,7 +65,20 @@ checkAutomaticDateTimeZone = async () => {
     const result = await AutoStartManager.checkAutomaticDateTimeZone();
 
     console.log('Automatic Date Time Zone:', result.isAutomatic);
-  };
+};
 ```
 ![enableautomaticdatetime](https://github.com/asephermann/pictures/blob/main/enableautomaticdatetime.jpg)
+
+### Check Camera
+
+```typescript
+import { AutoStartManager } from 'capacitor-autostartmanager';
+
+
+checkCamera = async () => {
+    const result = await AutoStartManager.checkCamera();
+
+    console.log('Camera Open:', result.isCameraOpen);
+};
+```
 </docgen-api>

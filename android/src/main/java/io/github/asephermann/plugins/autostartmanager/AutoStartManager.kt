@@ -3,6 +3,7 @@ package io.github.asephermann.plugins.autostartmanager
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
+import android.hardware.Camera
 import android.os.Build
 import android.provider.Settings
 import android.provider.Settings.SettingNotFoundException
@@ -63,4 +64,17 @@ class AutoStartManager {
         }
         return !(dateTime == 0 || timezone == 0)
     }
+
+    fun checkCamera(): Boolean{
+        var camera: Camera? = null
+        try {
+            camera = Camera.open()
+        } catch (e: RuntimeException) {
+            return false
+        } finally {
+            camera?.release()
+        }
+        return true
+    }
+
 }
