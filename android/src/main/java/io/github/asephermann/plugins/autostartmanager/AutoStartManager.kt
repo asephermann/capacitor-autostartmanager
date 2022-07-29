@@ -1,6 +1,7 @@
 package io.github.asephermann.plugins.autostartmanager
 
 import android.app.Activity
+import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
 import android.hardware.Camera
@@ -8,11 +9,15 @@ import android.os.Build
 import android.provider.Settings
 import android.provider.Settings.SettingNotFoundException
 import android.util.Log
-import androidx.appcompat.app.AlertDialog
 
 const val TAG = "AutoStartManager"
 
 class AutoStartManager {
+
+    fun showStartManager(activity: Activity) {
+        val context: Context = activity.applicationContext
+        AutoStartPermissionHelper().getAutoStartPermission(context)
+    }
 
     fun checkAutomaticDateTimeZone(activity: Activity): Boolean{
         try {

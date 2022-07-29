@@ -11,6 +11,10 @@ class AutoStartManagerPlugin : Plugin() {
     private val implementation = AutoStartManager()
 
     @PluginMethod
+    fun showStartManager(call: PluginCall) {
+        implementation.showStartManager(activity)
+    }
+    @PluginMethod
     fun checkAutomaticDateTimeZone(call: PluginCall) {
         val ret = JSObject()
         val isAutomatic = implementation.checkAutomaticDateTimeZone(activity)

@@ -13,6 +13,7 @@ npx cap sync
 
 <docgen-index>
 
+* [`showStartManager()`](#showstartmanager)
 * [`checkAutomaticDateTimeZone()`](#checkautomaticdatetimezone)
 * [`checkCamera()`](#checkcamera)
 * [Interfaces](#interfaces)
@@ -21,6 +22,15 @@ npx cap sync
 
 <docgen-api>
 <!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
+
+### showStartManager()
+
+```typescript
+showStartManager() => Promise<void>
+```
+
+--------------------
+
 
 ### checkAutomaticDateTimeZone()
 
@@ -54,6 +64,17 @@ checkCamera() => Promise<{ isCameraOpen: Boolean; }>
 | **valueOf** | () =&gt; boolean | Returns the primitive value of the specified object. |
 
 ## Example
+
+### Show Start manager
+
+```typescript
+import { AutoStartManager } from 'capacitor-autostartmanager';
+
+
+showStartManager = async () => {
+    await AutoStartManager.showStartManager();
+};
+```
 
 ### Check Automatic Date TimeZone
 
