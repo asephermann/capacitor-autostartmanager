@@ -10,10 +10,10 @@ import com.getcapacitor.annotation.CapacitorPlugin
 class AutoStartManagerPlugin : Plugin() {
     private val implementation = AutoStartManager()
     @PluginMethod
-    fun echo(call: PluginCall) {
-        val value = call.getString("value")
+    fun checkAutomaticDateTimeZone(call: PluginCall) {
         val ret = JSObject()
-        ret.put("value", value?.let { implementation.echo(it) })
+        val isAutomatic = implementation.checkAutomaticDateTimeZone(activity)
+        ret.put("isAutomatic", isAutomatic)
         call.resolve(ret)
     }
 }
