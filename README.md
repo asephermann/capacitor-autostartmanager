@@ -74,6 +74,7 @@ import { AutoStartManager } from 'capacitor-autostartmanager';
 showStartManager = async () => {
     await AutoStartManager.showStartManager();
 };
+
 ```
 
 ### Check Automatic Date TimeZone
@@ -87,6 +88,7 @@ checkAutomaticDateTimeZone = async () => {
 
     console.log('Automatic Date Time Zone:', result.isAutomatic);
 };
+
 ```
 ![enableautomaticdatetime](https://github.com/asephermann/pictures/blob/main/enableautomaticdatetime.jpg)
 
@@ -101,5 +103,6 @@ checkCamera = async () => {
 
     console.log('Camera Open:', result.isCameraOpen);
 };
+
 ```
 </docgen-api>
