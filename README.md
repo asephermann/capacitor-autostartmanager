@@ -63,46 +63,4 @@ checkCamera() => Promise<{ isCameraOpen: Boolean; }>
 | ----------- | ---------------- | ---------------------------------------------------- |
 | **valueOf** | () =&gt; boolean | Returns the primitive value of the specified object. |
 
-## Example
-
-### Show Start manager
-
-```typescript
-import { AutoStartManager } from 'capacitor-autostartmanager';
-
-
-showStartManager = async () => {
-    await AutoStartManager.showStartManager();
-};
-
-```
-
-### Check Automatic Date TimeZone
-
-```typescript
-import { AutoStartManager } from 'capacitor-autostartmanager';
-
-
-checkAutomaticDateTimeZone = async () => {
-    const result = await AutoStartManager.checkAutomaticDateTimeZone();
-
-    console.log('Automatic Date Time Zone:', result.isAutomatic);
-};
-
-```
-![enableautomaticdatetime](https://github.com/asephermann/pictures/blob/main/enableautomaticdatetime.jpg)
-
-### Check Camera
-
-```typescript
-import { AutoStartManager } from 'capacitor-autostartmanager';
-
-
-checkCamera = async () => {
-    const result = await AutoStartManager.checkCamera();
-
-    console.log('Camera Open:', result.isCameraOpen);
-};
-
-```
 </docgen-api>
