@@ -1,6 +1,6 @@
 {
   "name": "capacitor-autostartmanager",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Auto Start Manager, Check Automatic Date Time Zone, Check Camera",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
